@@ -13,7 +13,7 @@ namespace Spectre.Cli.AppInfo
 
         public AppInfoService()
         {
-            _assembly = Assembly.GetExecutingAssembly();
+            _assembly = Assembly.GetEntryAssembly();
             _version = _assembly.GetName().Version;
             Timer?.Start();
         }
@@ -25,6 +25,10 @@ namespace Spectre.Cli.AppInfo
         public string GetAppPath() {
             var path = Path.GetDirectoryName(_assembly.Location);
             return path;
+        }
+
+        public string GetExecutableName() {
+            return Path.GetFileName(System.Diagnostics.Process.GetCurrentProcess().MainModule.FileName);
         }
 
         public string GetRuntimeName() {

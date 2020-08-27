@@ -29,7 +29,7 @@ namespace Spectre.Cli.AppInfo
             );
             AnsiConsole.Render(table);
             AnsiConsole.WriteLine();
-            AnsiConsole.MarkupLine($"Currently running from [bold grey]{path}[/].");
+            AnsiConsole.MarkupLine($"Currently running [bold grey]{_infoService.GetExecutableName()}[/] from [bold grey]{path}[/].");
             return 0;
         }
 

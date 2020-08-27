@@ -79,7 +79,7 @@ Task("Build")
 		Information($"Building {project.GetDirectoryName()} for {configuration}");
 		var settings = new DotNetCoreBuildSettings {
 			Configuration = configuration,
-			ArgumentCustomization = args => args.Append("/p:NoWarn=NU1701"),
+			ArgumentCustomization = args => args.Append($"/p:Version={packageVersion}"),
 		};
 		DotNetCoreBuild(project.FullPath, settings);
 	}
