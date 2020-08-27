@@ -3,6 +3,16 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
+  <PropertyGroup>
+    <PackageId>Spectre.Cli.AppInfo</PackageId>
+    <Authors>agc93</Authors>
+    <Copyright>© Alistair Chapman 2020</Copyright>
+    <PackageTags>spectre;commandline;console;</PackageTags>
+    <RepositoryUrl>https://github.com/agc93/spectre.cli.appinfo</RepositoryUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/agc93/spectre.cli.appinfo</PackageProjectUrl>
+  </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Spectre.Cli" Version="0.37.0" />
