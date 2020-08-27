@@ -1,3 +1,5 @@
 branches:
   master:
     mode: ContinuousDeployment
+    tag: alpha
+    increment: Minor
