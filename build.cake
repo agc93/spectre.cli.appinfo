@@ -126,8 +126,8 @@ Task("Publish-NuGet-Package")
 .IsDependentOn("NuGet")
 .WithCriteria(() => HasEnvironmentVariable("NUGET_TOKEN"))
 .WithCriteria(() => HasEnvironmentVariable("GITHUB_REF"))
-// this repo is an experiment in a simpler form of branching/versioning so we're treating untagged master as a develop branch
-.WithCriteria(() => EnvironmentVariable("GITHUB_REF").StartsWith("refs/tags/v") || EnvironmentVariable("GITHUB_REF") == "refs/heads/master")
+// this repo is an experiment in a simpler form of branching/versioning so we're treating untagged main as a develop branch
+.WithCriteria(() => EnvironmentVariable("GITHUB_REF").StartsWith("refs/tags/v") || EnvironmentVariable("GITHUB_REF") == "refs/heads/main")
 .Does(() => {
     var nugetToken = EnvironmentVariable("NUGET_TOKEN");
     var pkgFiles = GetFiles($"{artifacts}package/*.nupkg");

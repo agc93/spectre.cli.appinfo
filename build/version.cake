@@ -1,5 +1,4 @@
 #module nuget:?package=Cake.DotNetTool.Module&version=0.4.0
-#tool "dotnet:https://api.nuget.org/v3/index.json?package=GitVersion.Tool&version=5.3.7"
 #tool "dotnet:https://api.nuget.org/v3/index.json?package=minver-cli&version=2.3.0"
 #addin "nuget:?package=Cake.MinVer&version=0.1.0"
 
