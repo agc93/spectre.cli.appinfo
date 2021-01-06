@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Threading.Tasks;
 using Spectre.Console;
+using Spectre.Console.Cli;
 
 namespace Spectre.Cli.AppInfo
 {
